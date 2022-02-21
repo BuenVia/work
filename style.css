@@ -1,5 +1,8 @@
 :root {
-
+    --clr-one: rgb(0, 0, 0);
+    --clr-two: rgb(180, 180, 180);
+    --clr-three: rgb(255, 255, 255);
+    --clr-four: rgb(255, 0, 0);
 }
 
 *, *::after, *::before {
@@ -8,18 +11,40 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--clr-one);
+    color: var(--clr-two);
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .list-container {
     margin-top: 2em;
 }
 
+h1 {
+    font-weight: 900;
+}
+
 ul {
     list-style: none;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+a:hover {
+    color: var(--clr-four);
+    font-size: 18px;
 }
