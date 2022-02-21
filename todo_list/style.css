@@ -1,6 +1,7 @@
 :root {
     --clr-one: lightgray;
-    --clr-two: #333;
+    --clr-two: rgb(51, 51, 51);
+    --clr-two-a: rgb(51, 51, 51, 0.5);
     --clr-three: rgb(230, 230, 230);
     --clr-four: rgb(150, 150, 150);
 }
@@ -26,7 +27,7 @@ body {
 
 .todo-app {
     margin: 5rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--clr-four);
     border-radius: 8px;
     width: 30%;
@@ -41,6 +42,7 @@ body {
     padding: 1rem;
     color: var(--clr-three);
     box-shadow: 5px 4px .1rem black;
+    border-radius: 10px;
 }
 
 label {
@@ -90,6 +92,14 @@ label {
     margin: 2rem 0 1rem;
     padding: 1rem;
     background-color: var(--clr-two);
-    color: var(--clr-three);
+    color: var(--clr-four);
     box-shadow: 5px 4px .1rem black;
+    border-radius: 10px;
+}
+
+.completed {
+    color: var(--clr-four);
+    background-color: var(--clr-two-a);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 0.3em;
 }

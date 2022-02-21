@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer type="module"></script>
+    <title>Flashcards</title>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="nav">
+                <h1>Flashcards</h1>
+                <a class="close" href="../">X</a>
+            </div>
+            <div class="score">
+                <p id="total">Total Number of Cards: 100</p>
+                <p id="score">Score: 30/ 100</p>
+                <p id="wrong">Wrong: 10</p>
+                <p id="skip">Skipped: 2</p>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <div class="start-container">
+        <button id="start">Start</button>
+    </div>
+
+
+
+
+    <div class="card">
+        <div class="hide" id="flashcard">
+            <h2 id="word"></h2>
+
+            <form action="javascript:void(0)" id="form">
+                <input type="text" id="response">
+                <div class="buttons">
+                </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="summary">
+        <div class="details"></div>
+    </div>
+
+
+
+
+    <footer id="foot">
+
+
+        <div class="footer footer-neutral"></div>
+        <div class="hide footer footer-correct"></div>
+        <div class="hide footer footer-incorrect"></div>
+
+
+
+        <div class="footer-container">
+
+            <div class="footer-text">
+                <p id="translation"></p>
+            </div>
+            
+            <div class="btn-container">
+                <button id="submit" class="hide" type="submit" disabled>Submit</button>
+
+        </form>
+            <button id="next" class="hide"></button>
+            </div>
+        </div>
+    
+    
+    
+    </footer>
+
+</body>
+</html>

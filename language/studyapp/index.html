@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studyapp.css">
+    <script src="studyapp.js" type="module"></script>
+    <title>Study App</title>
+</head>
+<body>
+    
+<!--HEADER-->
+<head>
+    <div class="header-container">
+        <div class="progress" id="progress">
+            <!-- <p>Word: <span>1 of 3</span></p>
+            <p>Correct: <span>1</span></p>
+            <p>Incorrect: <span>2</span></p> -->
+        </div>
+        <div class="close"><a href="../">X</a> </div>
+    </div>
+</head>
+
+<!--MAIN-->
+<main>
+
+    <div class="info-container" id="infoContainer">
+        <div class="info-box">
+            <h1>Translate</h1>
+            <p>Translate the words from English into Spanish</p>
+            <button id="start" class="btn">START</button>
+        </div>
+    </div>
+
+
+    <div class="main-container" id="mainContainer">
+        <div class="word-container" id="wordContainer"></div>
+        <div class="user-container">
+            <form action="javascript:void(0)">
+                <input type="text" id="userInput" class="user-input" autofocus>
+                <button type="submit" id="submit" class="submit btn" style="background-color: slategray;">CHECK</button>
+                <button id="next" class="next btn hide">NEXT</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="summary-container" id="summaryContainer">
+        <div class="summary-box" id="summaryBox">
+            <div id="incorrectMessage"></div>
+            <div class="incorrect-answers" id="incorrectAnswers"></div>
+            <div class="btn-Container">
+                <a href="../"><button>FINISH</button></a>
+                <button id="reset">TRY AGAIN</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<!--FOOTER-->
+
+
+
+</body>
+</html>
