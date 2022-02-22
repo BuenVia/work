@@ -2,6 +2,8 @@
     --bkg-one: rgb(50, 50, 50);
     --bkg-two: rgb(15, 15, 15);
     --txt-one: rgb(200, 200, 200);
+    --txt-two: rgb(0, 200, 0);
+    --txt-three: rgb(255, 0, 0);
 }
 
 *, *::after, *::before {
@@ -41,7 +43,7 @@ a {
     margin-top: 1.5rem;
     padding: 1.5rem;
     background-color: var(--bkg-two);
-    width: 50%;
+    width: 70%;
     color: var(--txt-one);
 }
 
@@ -60,7 +62,7 @@ a {
 }
 
 .input-container select {
-    width: 6em;
+    width: fit-content;
     padding: 5px;
     background-color: var(--bkg-one);
     border: none;
@@ -112,11 +114,12 @@ a {
 }
 
 .new-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     width: 100%;
     margin-top: 1rem;
     background-color: var(--bkg-one);
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 5px;
 }
