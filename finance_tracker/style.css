@@ -1,0 +1,74 @@
+:root {
+    --bkg-one: rgb(50, 50, 50);
+    --bkg-two: rgb(15, 15, 15);
+    --txt-one: rgb(200, 200, 200);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bkg-one);
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-one);
+}
+
+.header {
+    text-align: center;
+    color: var(--txt-one);
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bkg-two);
+    width: 50%;
+    color: var(--txt-one);
+}
+
+.input-container label {
+    margin-top: 2rem;
+}
+
+.input-container select {
+    width: 5em;
+}
+
+.input-container input {
+    width: 50%;
+}
+
+.btn {
+    padding: .5em;
+    width: 5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add {
+    margin-top: 1rem;
+    color: var(--txt-one);
+    background-color: var(--bkg-one);
+}
+
+.add:hover {
+    background-color: var(--txt-one);
+    color: var(--bkg-one);
+}

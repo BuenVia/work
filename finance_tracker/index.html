@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Finance Tracker</title>
+</head>
+<body>
+    
+    <a href="../">HOME</a>
+    <div class="header">
+        <h1>FINANCE TRACKER</h1>
+    </div>
+
+    <div class="input-row">
+        <div class="input-container">
+
+                <label for="paymentType">TYPE</label>
+                <select id="paymentType">
+                    <option selected disabled>SELECT</option>
+                    <option value="debit">DEBIT</option>
+                    <option value="credit">CREDIT</option>
+                </select>
+                <label for="amount">AMOUNT</label>
+                <input type="number" id="amount">
+        
+
+                <label for="category">CATEGORY</label>
+                <input type="text" id="category">
+                <label for="date">DATE</label>
+                <input type="date" id="date">
+
+            <div class="row">
+                <button class="btn add" id="submit">ADD</button>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="output-container"></div>
+
+</body>
+</html>
