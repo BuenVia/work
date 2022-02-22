@@ -26,6 +26,7 @@ function createTask(text) {
 function interact() {
     let task = userInput.value
     createTask(task)
+    userInput.value = ''
 }
 
 function completeTask() {

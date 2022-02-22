@@ -25,7 +25,8 @@ a {
     color: var(--txt-one);
 }
 
-.input-row {
+/* INPUT */
+.body-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,6 +36,8 @@ a {
 .input-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 1.5rem;
     padding: 1.5rem;
     background-color: var(--bkg-two);
@@ -42,16 +45,38 @@ a {
     color: var(--txt-one);
 }
 
+.container-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
 .input-container label {
-    margin-top: 2rem;
+    margin: 2rem 0 1rem;
 }
 
 .input-container select {
-    width: 5em;
+    width: 6em;
+    padding: 5px;
+    background-color: var(--bkg-one);
+    border: none;
+    border-radius: 5px;
+    color: var(--txt-one);
+    font-size: 18px;
 }
 
 .input-container input {
-    width: 50%;
+    width: 100%;
+    padding: 5px;
+    background-color: var(--bkg-one);
+    border: none;
+    border-radius: 5px;
+    color: var(--txt-one);
+    font-size: 18px;
 }
 
 .btn {
@@ -71,4 +96,27 @@ a {
 .add:hover {
     background-color: var(--txt-one);
     color: var(--bkg-one);
+}
+
+/* OUTPUT */
+.output-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bkg-two);
+    width: 50%;
+    color: var(--txt-one);
+}
+
+.new-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--bkg-one);
+    padding: 1rem;
+    border-radius: 5px;
 }

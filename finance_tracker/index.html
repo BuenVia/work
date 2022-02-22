@@ -15,32 +15,59 @@
         <h1>FINANCE TRACKER</h1>
     </div>
 
-    <div class="input-row">
+    <div class="body-row">
         <div class="input-container">
+            
+            <div class="container-row">
+                <div class="item">
+                    <label for="paymentType">TYPE</label>
+                    <select id="paymentType">
+                        <option selected disabled>SELECT</option>
+                        <option value="DEBIT">DEBIT</option>
+                        <option value="CREDIT">CREDIT</option>
+                    </select>
+                </div>
+                
+                <div class="item">
+                    <label for="amount">AMOUNT</label>
+                    <input type="number" id="amount" placeholder="Enter Amount">
+                </div>
+                
+                <div class="item">
+                    <label for="category">CATEGORY</label>
+                    <input type="text" id="category" placeholder="Enter Category">
+                </div>
+                
+                <div class="item">
+                    <label for="date">DATE</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
 
-                <label for="paymentType">TYPE</label>
-                <select id="paymentType">
-                    <option selected disabled>SELECT</option>
-                    <option value="debit">DEBIT</option>
-                    <option value="credit">CREDIT</option>
-                </select>
-                <label for="amount">AMOUNT</label>
-                <input type="number" id="amount">
-        
-
-                <label for="category">CATEGORY</label>
-                <input type="text" id="category">
-                <label for="date">DATE</label>
-                <input type="date" id="date">
-
-            <div class="row">
+            <div class="container-row">
                 <button class="btn add" id="submit">ADD</button>
             </div>
-        </div>
-    
+
+        </div>    
     </div>
 
-    <div class="output-container"></div>
+    <div class="body-row">
+        <div class="output-container" id="outputContainer">
+            <div class="container-row">
+                <h3>TOTAL SPENT: <span id="totalSpent">$00.00</span></h3>
+            </div>
+            <div class="container-row">
+
+                <div class="new-item">
+                    <div class="new-type" id="newType">DEBIT</div>
+                    <div class="new-amount" id="newAmount">$21.32</div>
+                    <div class="new-catergory" id="newCategory">FOOD</div>
+                    <div class="new-date" id="newDate">22/02/2022</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
