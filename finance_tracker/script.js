@@ -95,6 +95,9 @@ calcSpent()
 function clearItems() {
     localStorage.clear()
     outputContainer.innerHTML = ''
+    totalSpent.innerText = '$0'
+    totalDebit.innerText = '$0'
+    totalCredit.innerText = '$0'
 }
 
 function todayDate() {
