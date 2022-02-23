@@ -1,5 +1,6 @@
 :root {
     --bkg-one: rgb(50, 50, 50);
+    --bkg-two: rgb(20, 20, 20);
     --txt-one: rgb(200, 200, 200);
 }
 
@@ -15,78 +16,103 @@ body {
     color: var(--txt-one);
 }
 
-.home {
-    text-decoration: none;
+header {
+    background-color: var(--bkg-two);
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    padding: 20px 0;
+}
+
+button {
+    padding: 8px;
+    width: fit-content;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bkg-one);
+    color: whitesmoke;
+}
+
+.create-box {
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: var(--bkg-two);
     color: var(--txt-one);
 }
 
-h1, h3 {
+.create-box h2 {
     text-align: center;
 }
 
-.score-container {
-    margin-top: 1.5rem;
-    text-align: center;
-}
-
-.card-container {
-    margin: auto;
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.card {
-    border: 1px solid blueviolet;
-    border-radius: 20px;
-    padding: 1rem;
-    min-height: 20em;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.word {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.answer {
-    font-size: 2rem;
-    color: darkturquoise;
-    cursor: pointer;
-}
-
-.word:hover, .answer:hover {
-    font-size: 2.5rem;
-    transition: 200ms;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-.btn {
-    padding: 15px;
-    width: 8em;
-    margin: 1rem;
-    background-color: blueviolet;
-    color: white;
-    border: none;
+.create-box textarea {
+    width: 100%;
     border-radius: 5px;
-    outline: none;
-    font: inherit;
-    cursor: pointer;
+    font-family: inherit;
+    border: none;
 }
 
-.btn:hover {
-    background-color: white;
-    color: blueviolet;
-    transition: 500ms;
+.flashcards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard {
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px;
+    background-color: var(--bkg-two);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: var(--txt-one);
+}
+
+.flashcard h2 {
+    font-size: 1rem;
+}
+
+@media(max-wdith: 768px) {
+    .flashcard {
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .create-box {
+        width: 100%;
+    }
+
+    .flashcard {
+        width: 100%;
+    }
 }

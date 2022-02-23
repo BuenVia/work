@@ -9,31 +9,36 @@
     <title>Flashcard</title>
 </head>
 <body>
-    <a href="../" class="home">HOME</a>
-    <h1>FLASHCARD APP</h1>
-    <h3>Click the word to reveal the answer</h3>
 
-    <div class="row">
-        <div class="score-container">
-            <p id="numberCards">Completed: 3/10</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="card-container">
-            <div class="card" id="card">
-                <p class="word" id="word">Word</p>
-                <p class="answer hide" id="answer">Answer</p>
+    <header>
+        <div class="container">
+            <div class="nav">
+                <h1>FLASHCARD APP</h1>
+                <div>
+                    <button id="show">NEW CARD</button>
+                    <button id="delete">DEL CARDS</button>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="row">
-        <div class="btn-container">
-            <button class="btn" id="prev">PREVIOUS</button>
-            <button class="btn" id="next">NEXT</button>
+    <main>
+        <div class="container">
+            <div class="create-box">
+                <h2>CREATE FLASHCARDS</h2>
+                <label for="question">WORD</label>
+                <textarea id="question"></textarea>
+                <label for="answer">WORD</label>
+                <textarea id="answer"></textarea>
+                <div>
+                    <button id="save">SAVE</button>
+                    <button id="close">CLOSE</button>
+                </div>
+            </div>
+
+            <div class="flashcards" id="flashcards"></div>
         </div>
-    </div>
+    </main>
 
 </body>
 </html>
