@@ -43,13 +43,14 @@ function createArray() {
 }
 
 function createNewItem(text) {
- 
         const divNewItem = document.createElement('div')
         const pNewAmount = document.createElement('div')
         const pNewType = document.createElement('div')
         const pNewCat = document.createElement('div')
         const pNewCom = document.createElement('div')
         const pNewDate = document.createElement('div')
+        const pRemove = document.createElement('div')
+        const indexPos = items.indexOf(text)
 
         divNewItem.classList.add('new-item')
         // FIX CREDIT/ DEBIT COLOR - because array is creating object
@@ -64,14 +65,20 @@ function createNewItem(text) {
         pNewCat.innerText = text.category
         pNewCom.innerText = text.company
         pNewDate.innerText = text.date
+        pRemove.innerHTML = 'x'
+        pRemove.classList = 'remove'
+
+        pRemove.onclick = remove
 
         divNewItem.appendChild(pNewAmount)
         divNewItem.appendChild(pNewType)
         divNewItem.appendChild(pNewCat)
         divNewItem.appendChild(pNewCom)
         divNewItem.appendChild(pNewDate)
+        divNewItem.appendChild(pRemove)
+        divNewItem.id = indexPos
 
-        outputContainer.appendChild(divNewItem)  
+        outputContainer.appendChild(divNewItem)
 
 }
 
@@ -97,6 +104,13 @@ function calcSpent() {
     console.log(spent, debit, credit);
 }
 calcSpent()
+
+function remove() {
+    const x = this.parentNode.id
+    items.splice(x, 1)
+    localStorage.setItem('data', JSON.stringify(items))
+    console.log(items)
+}
 
 function clearItems() {
     localStorage.clear()

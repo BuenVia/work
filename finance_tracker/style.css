@@ -128,11 +128,22 @@ a {
 
 .new-item {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: space-between;
     width: 100%;
     margin-top: 1rem;
     background-color: var(--bkg-one);
     padding: .5rem;
     border-radius: 5px;
+}
+
+.remove {
+    float: right;
+    text-align: right;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.remove:hover {
+   color: var(--txt-three);
 }
