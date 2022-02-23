@@ -24,16 +24,22 @@ function process() {
 }
 
 function createArray() {
-    let itemObj = {
-        'amount': amount.value, 
-        'type': paymentType.value,
-        'category': category.value,
-        'company': company.value,
-        'date': date.value
+    if (paymentType.value === '' || amount.value === '' || category.value === '' || company.value === '' || date.value === '') {
+        alert('Please ensure all details are entered correctly')
+    } else {
+
+        let itemObj = {
+            'amount': amount.value, 
+            'type': paymentType.value,
+            'category': category.value,
+            'company': company.value,
+            'date': date.value
+        }
+        items.push(itemObj)
+        localStorage.setItem('data', JSON.stringify(items))
+        createNewItem(items[items.length - 1])
     }
-    items.push(itemObj)
-    localStorage.setItem('data', JSON.stringify(items))
-    createNewItem(items[items.length - 1])
+
 }
 
 function createNewItem(text) {
@@ -120,4 +126,3 @@ function todayDate() {
 todayDate()
 
 // REMOVE ITEM FUNCTION
-// ERROR MESSAGE
