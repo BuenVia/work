@@ -62,13 +62,13 @@ function createNewItem(text) {
             pNewAmount.style.color = 'var(--txt-two)'
         }
         pNewType.innerText = text.type
-        pNewCat.innerText = text.category
-        pNewCom.innerText = text.company
+        pNewCat.innerText = text.category.toUpperCase()
+        pNewCom.innerText = text.company.toUpperCase()
         pNewDate.innerText = text.date
         pRemove.innerHTML = 'x'
         pRemove.classList = 'remove'
 
-        pRemove.onclick = remove
+        pRemove.onclick = removeItem
 
         divNewItem.appendChild(pNewAmount)
         divNewItem.appendChild(pNewType)
@@ -105,11 +105,13 @@ function calcSpent() {
 }
 calcSpent()
 
-function remove() {
+function removeItem() {
     const x = this.parentNode.id
     items.splice(x, 1)
     localStorage.setItem('data', JSON.stringify(items))
     console.log(items)
+    this.parentNode.remove()
+    calcSpent()
 }
 
 function clearItems() {
@@ -138,5 +140,3 @@ function todayDate() {
 }
 
 todayDate()
-
-// REMOVE ITEM FUNCTION
