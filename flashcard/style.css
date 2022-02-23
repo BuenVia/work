@@ -1,0 +1,92 @@
+:root {
+    --bkg-one: rgb(50, 50, 50);
+    --txt-one: rgb(200, 200, 200);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bkg-one);
+    color: var(--txt-one);
+}
+
+.home {
+    text-decoration: none;
+    color: var(--txt-one);
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.score-container {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.card-container {
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    border: 1px solid blueviolet;
+    border-radius: 20px;
+    padding: 1rem;
+    min-height: 20em;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.word {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.answer {
+    font-size: 2rem;
+    color: darkturquoise;
+    cursor: pointer;
+}
+
+.word:hover, .answer:hover {
+    font-size: 2.5rem;
+    transition: 200ms;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 15px;
+    width: 8em;
+    margin: 1rem;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: white;
+    color: blueviolet;
+    transition: 500ms;
+}
