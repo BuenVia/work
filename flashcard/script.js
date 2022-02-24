@@ -6,7 +6,7 @@ const question = document.getElementById('question')
 const answer = document.getElementById('answer')
 const flashcards = document.getElementById('flashcards')
 
-let words = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : []
+let words = localStorage.getItem('flashcard-word') ? JSON.parse(localStorage.getItem('flashcard-word')) : []
 
 saveBtn.addEventListener('click', createWord)
 
@@ -42,7 +42,7 @@ function createWord() {
         'answer': answer.value
     }
     words.push(wordObj)
-    localStorage.setItem('data', JSON.stringify(words))
+    localStorage.setItem('flashcard-word', JSON.stringify(words))
     createFlashcard(words[words.length - 1])
     question.value = ''
     answer.value = ''
