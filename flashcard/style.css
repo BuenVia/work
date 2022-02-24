@@ -2,6 +2,7 @@
     --bkg-one: rgb(50, 50, 50);
     --bkg-two: rgb(20, 20, 20);
     --txt-one: rgb(200, 200, 200);
+    --txt-two: rgb(119, 119, 119);
 }
 
 *, *::after, *::before {
@@ -31,6 +32,11 @@ header {
     margin: auto;
     width: 100%;
     padding: 20px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--txt-one);
 }
 
 button {
@@ -68,11 +74,10 @@ button:hover {
     border: none;
 }
 
-.flashcards {
+.flashcard-container {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: auto;
     margin-top: 10px;
@@ -90,8 +95,20 @@ button:hover {
     color: var(--txt-one);
 }
 
-.flashcard h2 {
-    font-size: 1rem;
+.quest {
+    text-align: center;
+    color: var(--txt-two);
+    border-bottom: 1px solid red; 
+    padding: 15px; 
+    margin-top: 30px;
+}
+
+.ans {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 @media(max-wdith: 768px) {

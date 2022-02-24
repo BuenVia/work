@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module"></script>
     <title>Flashcard</title>
 </head>
 <body>
@@ -13,10 +13,11 @@
     <header>
         <div class="container">
             <div class="nav">
+                <a href="../">HOME</a>
                 <h1>FLASHCARD APP</h1>
                 <div>
-                    <button id="show">NEW CARD</button>
-                    <button id="delete">DEL CARDS</button>
+                    <button id="prev">PREV</button>
+                    <button id="next">NEXT</button>
                 </div>
             </div>
         </div>
@@ -36,7 +37,12 @@
                 </div>
             </div>
 
-            <div class="flashcards" id="flashcards"></div>
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard">
+                    <p id="quest" class="quest"></p>
+                    <p id="ans" class="ans"></p>
+                </div>
+            </div>
         </div>
     </main>
 
