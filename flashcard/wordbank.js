@@ -1,4 +1,4 @@
-export const ser = [
+export const word = [
 {
     'question': 'I am',
     'answer': 'soy'
