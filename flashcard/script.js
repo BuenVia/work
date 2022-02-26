@@ -12,8 +12,21 @@ const flashcard = document.getElementById('flashcard')
 const quest = document.getElementById('quest')
 const ans = document.getElementById('ans')
 
-
 next.addEventListener('click', showWord)
+
+let y = 0
+
+function showWord() {
+    if (y < word.length) {
+        quest.innerText = word[y].question;
+        flashcard.addEventListener('click', hideAnswer)
+        ans.innerText = word[y].answer
+        y++
+    }   else {
+        quest.innerText = ''
+        ans.innerText = ''
+    }
+} 
 
 function createRandom(array) {
     let currentIndex = array.length, randomIndex
@@ -27,20 +40,6 @@ function createRandom(array) {
 
 
 createRandom(word)
-
-let y = 0
-
-function showWord() {
-    if (y < word.length) {
-        quest.innerText = word[y].question;
-        ans.innerText = word[y].answer
-        flashcard.addEventListener('click', hideAnswer)
-        y++
-    }   else {
-        quest.innerText = ''
-        ans.innerText = ''
-    }
-} 
 
 function hideAnswer() {
     ans.style.display === 'none' ? ans.style.display = 'block' : ans.style.display = 'none'

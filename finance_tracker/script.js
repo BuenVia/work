@@ -10,7 +10,7 @@ const totalSpent = document.getElementById('totalSpent')
 const totalDebit = document.getElementById('totalDebit')
 const totalCredit = document.getElementById('totalCredit')
 
-let items = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : []
+let items = localStorage.getItem('finance') ? JSON.parse(localStorage.getItem('finance')) : []
 
 
 submit.addEventListener('click', process)
@@ -36,7 +36,7 @@ function createArray() {
             'date': date.value
         }
         items.push(itemObj)
-        localStorage.setItem('data', JSON.stringify(items))
+        localStorage.setItem('finance', JSON.stringify(items))
         createNewItem(items[items.length - 1])
     }
 
@@ -108,7 +108,7 @@ calcSpent()
 function removeItem() {
     const x = this.parentNode.id
     items.splice(x, 1)
-    localStorage.setItem('data', JSON.stringify(items))
+    localStorage.setItem('finance', JSON.stringify(items))
     console.log(items)
     this.parentNode.remove()
     calcSpent()
