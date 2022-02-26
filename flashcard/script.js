@@ -19,6 +19,7 @@ let y = 0
 function showWord() {
     if (y < word.length) {
         quest.innerText = word[y].question;
+        ans.style.display = 'none'
         flashcard.addEventListener('click', hideAnswer)
         ans.innerText = word[y].answer
         y++
@@ -42,6 +43,7 @@ function createRandom(array) {
 createRandom(word)
 
 function hideAnswer() {
+    console.log('click');
     ans.style.display === 'none' ? ans.style.display = 'block' : ans.style.display = 'none'
 }
 
