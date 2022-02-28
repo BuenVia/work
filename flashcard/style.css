@@ -67,11 +67,16 @@ button:hover {
     text-align: center;
 }
 
-.create-box textarea {
+.create-box select {
     width: 100%;
+    padding: 5px;
     border-radius: 5px;
     font-family: inherit;
     border: none;
+}
+
+.btn-container {
+    margin-top: 1em;
 }
 
 .flashcard-container {
