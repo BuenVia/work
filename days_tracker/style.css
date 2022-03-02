@@ -1,0 +1,60 @@
+:root {
+
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, aqua, darkslategray);
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.input-box {
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.input-box input {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:plum ;
+}
+
+.output-box {
+    margin-top: 3rem;
+    text-align: center;
+    color: white;
+}
