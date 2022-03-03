@@ -4,81 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuenVia Language</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mainStyle.css">
+    <script src="js/script.js" defer></script>
+    <title>BUENVIA: Language</title>
 </head>
 <body>
     
-<nav>
-    <div class="navbar">
-        <p><a href="../">HOME</a></p>
-    </div>
-</nav>
 
+<a href="../">HOME</a>
 <header>
     <h1>BUENVIA</h1>
-    <p>Practice Spanish verb conjugations in all tenses.</p>
+    <h3>Spanish Verb Conjugation</h3>
 </header>
 
+
 <main>
-    <div class="mainbody">
+    <div class="main-container">
 
-        <!--FIRST SECTION-->
-        <section class="section">
-            <div class="container">
-               
-                <a href="flashcards">
-                <div class="box" id="myBtn">
-                    <a href="flashcards"><p>Flashcards</p></a>
+        <div class="mood-group">
+            <!--INFINITIVE-->
+            <div class="tense-group">
+                <div class="item"><p>Infinitivo</p>
                 </div>
-                
-
-                <div class="box">
-                    <p>Present Subjunctive</p>
-                </div>
-
             </div>
-        </section>
+        </div>
 
-        <!--SECOND SECTION-->
-        <section class="section">
-            <div class="container">
-                
-
-                <div class="box" onclick="location.href='studyapp'">
-                    <p>Study App</p>
-                </div>
-
-                <div class="box">
-                    <p>Imperfect Tense</p>
-                </div>
-                
+        <div class="mood-group">
+            <h3>IMPERATIVO</h3>
+            <!--PRESENT-->
+            <div class="tense-group">
+                <div class="item" onclick="location.href='present'">Presente</div>
             </div>
-        </section>        
-        
-        <!--THIRD SECTIO-->
-        <section class="section">
-            <div class="container">
-
-                <div class="box" onclick="location.href='main.html'">
-                    <p>Infinitives</p>
-                </div>
-
-                <div class="box">
-                    <p>Present Tense</p>
-                </div>
-               
+            <!--FUTURE-->
+            <div class="tense-group">
+                <div class="item">Futuro 1</div>
+                <div class="item">Futuro 2</div>
             </div>
-        </section>
-    
+            <!--PAST-->
+            <div class="tense-group">
+                <div class="item">Preterito</div>
+                <div class="item">Idefinido</div>
+                <div class="item">Perfecto</div>
+                <div class="item">Pluscuamperfecto</div>
+            </div>
+            <!--CONDITIONAL-->
+            <div class="tense-group">
+                <div class="item">Condicional</div>     
+                <div class="item">Condicional Perfecto</div>     
+            </div>
+        </div>
+
+        <div class="mood-group">
+            <h3>SUBJUNTIVO</h3>
+            <!--PRESENTE DEL SUBJUNTIVO-->
+            <div class="tense-group">
+                <div class="item">Presente</div>
+            </div>
+            <!--FUTURO DEL SUBJUNTIVO-->
+            <div class="tense-group">
+                <div class="item">Futuro</div>
+            </div>
+            <!--PASADO DEL SUBJUNTIVO-->
+            <div class="tense-group">
+                <div class="item">Imperfecto</div>
+                <div class="item">Perfecto</div>
+                <div class="item">Pluscuamperfecto</div>
+            </div>
+        </div>
+
+        <div class="mood-group">
+            <h3>IMPERATIVO</h3>
+            <!--IMPERATIVE-->
+            <div class="tense-group">
+                <div class="item">Afirmativo</div>
+                <div class="item">Negativo</div>
+            </div>
+        </div>
+
     </div>
 </main>
 
 <footer>
-    <p>Footer</p>
+    <div class="footer">
+        <p>Powered by BuenVia</p>
+    </div>
 </footer>
 
 
-<!-- <script type="text/javascript" src="/projects/language/js/main.js"></script> -->
+
 </body>
 </html>

@@ -1,0 +1,102 @@
+:root {
+    --bkg: rgb(235, 235, 235);
+    --txt: rgb(49, 49, 49);
+    --brd: rgb(100, 100, 100);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bkg);
+    color: var(--txt);
+}
+
+header {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+header h1{
+    font-size: 4rem;
+}
+
+
+.main-container {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.mood-group {
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--txt);
+}
+
+.tense-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    padding: 1em;
+    border: 1px solid var(--brd);
+    border-radius: 10px;
+    margin: 2rem;
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.item:hover {
+    transition: 500ms;
+    background-color: rgba(255, 215, 0, 0.7);
+}
+
+.footer {
+    margin-top: 2rem;
+    height: 5rem;
+    text-align: center;
+}
+
+.choice-container {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1rem;
+}
+
+.question-container {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container button {
+    width: fit-content;
+}
+
+@media (max-width: 800px) {
+    .tense-group {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid gold;
+    }
+}
+

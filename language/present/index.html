@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <script src="../js/conjugateApp.js" type="module"></script>
+    <title>BuenVia</title>
+</head>
+<body>
+    
+        <a href="../">HOME</a>
+        <header>
+            <h1>BUENVIA</h1>
+            <h3>Spanish Verb Conjugation</h3>
+        </header>
+
+        <main>
+            <div class="main-container">
+
+                <div class="choice-container">
+                    <div class="choice-list">
+                        <select id="verb">
+                            <option value=0>ser</option>
+                            <option value=1>estar</option>
+                            <option value=2>hacer</option>
+                        </select>
+                        <button class="btn" id="submitBtn">Submit</button>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-element" id="questionElement"></div>
+                    <div class="input-container">
+                        <input type="text" id="answer">
+                        <button class="btn" id="answerBtn">Check</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+</body>
+</html>
