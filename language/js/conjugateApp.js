@@ -21,7 +21,7 @@ function init() {
     question = words[x]
     document.querySelector('.choice-container').style.display = 'none'
     document.querySelector('.question-container').style.display = 'block'
-    document.querySelector('.next-btn').style.display = 'none'
+    nextBtn.style.display = 'none'
     setQuestion()
 }
 
@@ -29,8 +29,9 @@ function setQuestion() {
     console.log(number);
     if (number < question.conjugate.length) {
         questionEl.innerText = question.conjugate[number].question;
-        document.querySelector('.answer-btn').style.display = 'block'
-        document.querySelector('.next-btn').style.display = 'none'
+        answer.focus()
+        answerBtn.style.display = 'block'
+        nextBtn.style.display = 'none'
         answer.value = ''
     } else {
         // Show summary
@@ -48,14 +49,18 @@ function nextQuestion() {
 
 function checkAnswer() {
     if (answer.value === question.conjugate[number].answer) {
-        console.log(true);
-        document.querySelector('.answer-btn').style.display = 'none'
-        document.querySelector('.next-btn').style.display = 'block'
+        questionEl.classList.add('correct-text')
+        answer.style.color = 'var(--correct)'
+        answerBtn.style.display = 'none'
+        nextBtn.style.display = 'block'
+        nextBtn.style.backgroundColor = 'var(--correct)'
     } else {
         // Push to array to show in summary
         console.log(false);
-        document.querySelector('.answer-btn').style.display = 'none'
-        document.querySelector('.next-btn').style.display = 'block'
+        questionEl.classList.add('incorrect-text')
+        answer.style.color = 'var(--incorrect)'
+        answerBtn.style.display = 'none'
+        nextBtn.style.display = 'block'
         summary.push(question.conjugate[number].answer)
     }
 }

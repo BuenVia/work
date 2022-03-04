@@ -1,7 +1,12 @@
 :root {
     --bkg: rgb(235, 235, 235);
     --txt: rgb(49, 49, 49);
-    --brd: rgb(100, 100, 100);
+    --txtOne: rgb(220, 220, 220);
+    --txtTwo: rgb(150, 150, 150);
+    --brd: rgb(99, 99, 99);
+    --go: rgba(60, 255, 0, 0.5);
+    --correct: rgb(67, 212, 0);
+    --incorrect: rgb(255, 0, 0);
 }
 
 * {
@@ -30,6 +35,10 @@ header h1{
     margin: auto;
     width: 80%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mood-group {
@@ -69,16 +78,63 @@ header h1{
     text-align: center;
 }
 
+.btn {
+    padding: 1rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--brd);
+    color: var(--txtOne);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--go);
+    color: var(--txt);
+}
+
+.btn:focus {
+    background-color: var(--go);
+    color: var(--txt);
+}
+
 .choice-container {
     margin-top: 2rem;
-    background-color: white;
     padding: 1rem;
+}
+
+.choice-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-container select {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: var(--txt);
+    color: var(--bkg);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 200px;
 }
 
 .question-container {
     display: none;
     margin-top: 2rem;
     padding: 1rem;
+    width: 50%;
+}
+
+.question-element {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: var(--txtTwo);
 }
 
 .input-container {
@@ -88,8 +144,30 @@ header h1{
     align-items: center;
 }
 
+.input-container #answer {
+    margin-top: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--txt);
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    color: var(--txt);
+    font-size: 2rem;
+    text-align: center;
+}
+
 .input-container button {
+    margin-top: 2rem;
     width: fit-content;
+}
+
+.correct-text {
+    color: var(--correct);
+}
+
+.incorrect-text {
+    color: var(--incorrect);
 }
 
 .summary-container {
