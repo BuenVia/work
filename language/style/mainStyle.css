@@ -92,6 +92,12 @@ header h1{
     width: fit-content;
 }
 
+.summary-container {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
 @media (max-width: 800px) {
     .tense-group {
         display: flex;
