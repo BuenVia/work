@@ -1,11 +1,14 @@
 :root {
-    --bkg: rgb(235, 235, 235);
-    --txt: rgb(49, 49, 49);
+    --bkg: rgb(36, 167, 160);
+    --txt: rgb(233, 233, 233);
     --txtOne: rgb(220, 220, 220);
     --txtTwo: rgb(150, 150, 150);
+    --itemOne: rgb(92, 168, 173);
+    --itemTwo: rgba(90, 199, 184, 0.7);
+    --line: rgb(181, 252, 242);
     --brd: rgb(99, 99, 99);
-    --go: rgba(60, 255, 0, 0.5);
-    --correct: rgb(67, 212, 0);
+    --go: rgba(0, 255, 179, 0.5);
+    --correct: rgb(77, 255, 115);
     --incorrect: rgb(255, 0, 0);
 }
 
@@ -17,7 +20,7 @@
 }
 
 body {
-    background-color: var(--bkg);
+    background: var(--bkg);
     color: var(--txt);
 }
 
@@ -26,10 +29,24 @@ header {
     margin-top: 1rem;
 }
 
-header h1{
-    font-size: 4rem;
+
+.nav {
+    display: flex;
+    padding-left: 5px;
 }
 
+.nav a{
+    text-decoration: none;
+    color: var(--txt);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo h1 {
+    font-family: 'Indie Flower', cursive;
+}
 
 .main-container {
     margin: auto;
@@ -54,22 +71,21 @@ header h1{
 
 .item {
     padding: 1em;
-    border: 1px solid var(--brd);
+    width: 200px;
+    height: 80px;
+    border: none;
     border-radius: 10px;
     margin: 2rem;
-
-    position: relative;
-    display: inline-block;
+    background-color: var(--itemOne);
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    box-shadow: 1px 2px 5px var(--brd);
+    
 }
 
 .item:hover {
     transition: 500ms;
-    background-color: rgba(255, 215, 0, 0.7);
+    background-color: var(--itemTwo);
+    box-shadow: 4px 8px 5px var(--brd);
 }
 
 .footer {
@@ -84,8 +100,8 @@ header h1{
     outline: none;
     border: none;
     border-radius: 10px;
-    background-color: var(--brd);
-    color: var(--txtOne);
+    background-color: var(--itemTwo);
+    color: var(--brd);
     font: inherit;
     font-weight: 700;
     cursor: pointer;
@@ -134,7 +150,7 @@ header h1{
 .question-element {
     margin-top: 2rem;
     font-size: 3rem;
-    color: var(--txtTwo);
+    color: var(--txtOne);
 }
 
 .input-container {
@@ -176,11 +192,31 @@ header h1{
     padding: 1rem;
 }
 
+.application-container {
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--line);
+}
+
+.text-container {
+    color: var(--txtTwo);
+}
+
+.translation-container {
+
+}
+
 @media (max-width: 800px) {
+    .mood-group {
+        border-bottom: none;
+    }
     .tense-group {
         display: flex;
         flex-wrap: wrap;
-        border-bottom: 1px solid gold;
+        border-bottom: 1px solid var(--line);
     }
 }
 
