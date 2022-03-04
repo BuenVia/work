@@ -1,16 +1,18 @@
 import { words } from './wordBank.js'
 
-const verb = id('verb')
 const submitBtn = id('submitBtn')
-const answer = id('answer')
 const answerBtn = id('answerBtn')
-const questionEl = id('questionElement')
 const nextBtn = id('nextBtn')
+const resetBtn = id('resetBtn')
+const verb = id('verb')
+const answer = id('answer')
+const questionEl = id('questionElement')
 const summaryEl = id('summaryElement')
 
 submitBtn.addEventListener('click', init)
 answerBtn.addEventListener('click', checkAnswer)
 nextBtn.addEventListener('click', nextQuestion)
+resetBtn.addEventListener('click', reset)
 
 let question
 let number = 0
@@ -27,6 +29,7 @@ function init() {
 
 function setQuestion() {
     console.log(number);
+    answer.disabled = false
     if (number < question.conjugate.length) {
         questionEl.innerText = question.conjugate[number].question;
         answer.focus()
@@ -48,12 +51,14 @@ function nextQuestion() {
 }
 
 function checkAnswer() {
+    answer.disabled = true
     if (answer.value === question.conjugate[number].answer) {
         questionEl.classList.add('correct-text')
         answer.style.color = 'var(--correct)'
         answerBtn.style.display = 'none'
         nextBtn.style.display = 'block'
         nextBtn.style.backgroundColor = 'var(--correct)'
+        nextBtn.focus()
     } else {
         // Push to array to show in summary
         console.log(false);
@@ -61,8 +66,19 @@ function checkAnswer() {
         answer.style.color = 'var(--incorrect)'
         answerBtn.style.display = 'none'
         nextBtn.style.display = 'block'
+        nextBtn.focus()
         summary.push(question.conjugate[number].answer)
     }
+}
+
+function reset() {
+    number = 0
+    summary = []
+    question = ''
+    document.querySelector('.choice-container').style.display = 'block'
+    document.querySelector('.question-container').style.display = 'none'
+    document.querySelector('.summary-container').style.display = 'none'
+    summaryEl.innerText = ''
 }
 
 function id(id) {
