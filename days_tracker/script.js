@@ -3,7 +3,7 @@ const submitBtn = document.getElementById('submit')
 
 const today = new Date();
 const todayYear = today.getFullYear()
-let todayMonth = today.getMonth()
+let todayMonth = today.getMonth() + 1
 let todayDay = today.getDay() - 1
 todayMonth = addZero(todayMonth)
 todayDay = addZero(todayDay)
@@ -21,5 +21,10 @@ function addZero(item) {
 
 
 submitBtn.addEventListener('click', () => {
-    console.log((date.value) - now)
+    console.log(date.value)
 })
+
+function dateHolder() {
+    date.value = now;
+}
+dateHolder()
