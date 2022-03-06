@@ -19,23 +19,28 @@ function operation() {
     if(eventName.value === '') {
         alert('Enter some shit!')
     } else {
-    const d1 =  new Date(now)
-    const d2 = new Date(date.value)
-    const diffTime = d2 - d1
-    const diffDays = diffTime / (1000 * 3600 * 24)
-    console.log(diffDays);
+        const d1 = new Date(now)
+        const d2 = new Date(date.value)
+        const diffTime = d2 - d1
+        const diffDays = diffTime / (1000 * 3600 * 24)
+        if (diffDays > 0) {
+            console.log(diffDays);
 
-    const format = new Date(date.value)
-    let formatYear = format.getFullYear()
-    let formatMonth = format.getMonth() + 1
-    let formatDay = format.getDate()
-    formatMonth = addZero(formatMonth)
-    formatDay = addZero(formatDay)
-
-    const formattedDate = `${formatDay}/${formatMonth}/${formatYear}`
-
-    daysEl.innerText = diffDays
-    dateRep.innerText = `${eventName.value} on ${formattedDate}`
+            const format = new Date(date.value)
+            let formatYear = format.getFullYear()
+            let formatMonth = format.getMonth() + 1
+            let formatDay = format.getDate()
+            formatMonth = addZero(formatMonth)
+            formatDay = addZero(formatDay)
+    
+            const formattedDate = `${formatDay}/${formatMonth}/${formatYear}`
+    
+            daysEl.innerText = diffDays
+            dateRep.innerText = `${eventName.value} on ${formattedDate}`
+        } else {
+            alert('Must be greater than today');
+        }
+    
     }
 }
 
