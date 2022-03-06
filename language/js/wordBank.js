@@ -113,3 +113,8 @@ const estar = {
 }
 
 export const wordArr = [ser, estar]
+
+const conjunctions = [
+        { english: "because (of)", spanish: "a causar de" },
+        { english: "", spanish: "" },
+]
