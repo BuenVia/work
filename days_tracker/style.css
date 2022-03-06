@@ -1,5 +1,7 @@
 :root {
-
+    --bkgOne: linear-gradient(90deg, aqua, darkslategray);
+    --bkgTwo: linear-gradient(90deg, darkslategray, black);
+    --bkgThree: linear-gradient(90deg, black, darkslategray);
 }
 
 *, *::before, *::after {
@@ -10,7 +12,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, aqua, darkslategray);
+    background: var(--bkgOne);
 }
 
 a {
@@ -30,12 +32,22 @@ h1 {
 }
 
 .input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     text-align: center;
     margin-top: 2rem;
 }
 
+.input-box label {
+    margin-top: 1rem;
+    color: white;
+}
+
 .input-box input {
+    margin-top: .5rem;
     padding: 5px;
     border-radius: 5px;
     outline: none;
@@ -43,6 +55,7 @@ h1 {
 }
 
 .btn {
+    margin: .5rem;
     padding: 8px;
     border: none;
     border-radius: 8px;
@@ -57,4 +70,8 @@ h1 {
     margin-top: 3rem;
     text-align: center;
     color: white;
+}
+
+.output {
+    font-size: 2rem;
 }

@@ -11,18 +11,18 @@
 <body>
     
     <a href="../">HOME</a>
-    <h1>Days Until</h1>
+    <h1 id="title">Days Tracker</h1>
 
     <div class="input-box">
+        <label for="eventName">Type in your event</label>
         <input type="text" id="eventName" placeholder="Add event...">
+        <label for="date">When is the date of the event?</label>
         <input type="date" id="date">
         <button class="btn" id="submit">SUBMIT</button>
     </div>
 
     <div class="output-box">
-        <p id="days" class="days">0</p>
-        <p>days until</p>
-        <p class="" id="date-rep">...</p>
+        <p class="output" id="date-rep"></p>
     </div>
 
 </body>
