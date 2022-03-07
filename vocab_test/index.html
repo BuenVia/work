@@ -11,21 +11,54 @@
 <body>
     
     <header>
-        <a href="/work/">HOME</a>
+        <div class="nav">
+            <a href="/work/">HOME</a>
+            <p class="close" id="close">X</p>
+        </div>
         <h1>VOCAB TEST</h1>
     </header>
 
     <main>
         <div class="main-container">
             <div class="choice-container" id="choiceContainer">
-                <label><input type="radio" name="word" id="colors" checked>Colors</label>
-                <label><input type="radio" name="word" id="opinions">Opinions</label>
-                <label><input type="radio" name="word" id="conjunctions">Conjunctions</label>
+                <select name="choice" id="choice">
+                    <option value="colors">Colors</option>
+                    <option value="opinions">Opinions</option>
+                    <option value="conjunctions">Conjunctions</option>
+                </select>
+                <button class="btn" id="selectBtn">Select</button>
+            </div>
+            
+
+            <div class="activity-container" id="activityContainer">
+                <p class="english" id="english">Conjunction Phrase</p>
+                <div class="input-container">
+                    <input type="text" class="spanish" id="spanish">
+                    <button class="btn" id="answerBtn">Check</button>
+                    <button class="btn" id="nextBtn">Next</button>
+                </div>
             </div>
 
-            <div class="activity-container">
-                <p id="english"></p>
+            <div class="summary-container" id="summaryContainer">
+                <div class="item-container">
+
+                    <div class="summary-item">
+                        <p class="english">Conjunction Phrase</p>
+                        <p class="spanish">Spanish Translation</p>
+                    </div>
+                    <div class="summary-item">
+                        <p class="english">Conjunction Phrase</p>
+                        <p class="spanish">Spanish Translation</p>
+                    </div>
+                    <div class="summary-item">
+                        <p class="english">Conjunction Phrase</p>
+                        <p class="spanish">Spanish Translation</p>
+                    </div>
+                
+                </div>
+                <button class="btn" id="resetBtn">Finish</button>
             </div>
+            
         </div>
     </main>
 
