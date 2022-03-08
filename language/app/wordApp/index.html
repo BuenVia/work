@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="/work/language/style/mainStyle.css">
     <link rel="stylesheet" href="/work/language/style/style.css">
     <script src="/work/language/js/mainScript.js" defer></script>
-    <script src="/work/language/js/translate.js" defer></script>
+    <script src="/work/language/js/vocabApp.js" defer></script>
     <title>BuenVia</title>
 </head>
-<body>
+<body onload="al()">
     
     <!-- <button onclick="loadWordApp()">Click</button> -->
 
@@ -24,18 +24,22 @@
                         <option value="colors">Colors</option>
                         <option value="opinions">Opinions</option>
                         <option value="conjunctions">Conjunctions</option>
+                        <option value="conjunctionsTwo">Conjunctions Two</option>
+                        <option value="conjunctionsTwo" disabled>Subjunctive</option>
                     </select>
                     <button class="btn" id="selectBtn">Select</button>
                 </div>
                 
     
                 <div class="activity-container" id="activityContainer">
-                    <p class="english" id="english"</p>
+                    <p class="english" id="english"></p>
                     <div class="input-container">
-                        <input type="text" class="spanish" id="spanish">
+                        <textarea type="text" class="spanish" id="spanish" cols="30" rows="10"></textarea>
+                        <!-- <input type="text" class="spanish" id="spanish"> -->
                         <button class="btn" id="answerBtn">Check</button>
                         <button class="btn" id="nextBtn">Next</button>
                     </div>
+                    <p class="show-correct" id="showCorrect"></p>
                 </div>
     
                 <div class="summary-container" id="summaryContainer">

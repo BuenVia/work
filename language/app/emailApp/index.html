@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/work/language/style/mainStyle.css">
+    <link rel="stylesheet" href="/work/language/style/style.css">
+    <script src="/work/language/js/mainScript.js" defer></script>
+    <title>BuenVia</title>
+</head>
+<body>
+    
+    <p class="close" id="close">X</p>
+    <header id="header"></header>
+
+<main>
+    <div class="main-container">
+        <div class="choice-container" id="choiceContainer">
+            <select name="choice" id="choice">
+                <option value="emailOne">Email 1 - Formal</option>
+                <option value="emailTwo">Email 2 - Informal</option>
+            </select>
+            <button class="btn" id="selectBtn">Select</button>
+        </div>
+    </div>
+
+    <div class="activity-container" id="activityContainer">
+        <p class="english" id="englishSentenceEl">Dear Whoever</p>
+        <div class="input-container" id="inputElement">
+            <textarea class="spanish-sentence" id="spanishSentenceEl"></textarea>
+            <button class="btn" id="submitBtn">Check</button>
+        </div>
+        <div class="completed" id="completed">
+            <p>Dear Whoever</p>
+            <p>I hope you are well</p>
+            <p>Rest of email input</p>
+        </div>
+    </div>
+
+    <div class="summary-container" id="summaryContainer">
+        <div class="email-container" id="emailContainer">
+            <div class="spanish-email" id="spanishEmail">Spanish email here</div>
+            <div class="english-email" id="englishEmail">English email here</div>
+        </div>
+        <button class="btn" id="resetBtn">Finish</button>
+    </div>
+
+</main>
+
+</body>
+</html>
