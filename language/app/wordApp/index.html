@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/work/language/style/mainStyle.css">
+    <link rel="stylesheet" href="/work/language/style/style.css">
+    <script src="/work/language/js/mainScript.js" defer></script>
+    <script src="/work/language/js/translate.js" defer></script>
+    <title>BuenVia</title>
+</head>
+<body>
+    
+    <!-- <button onclick="loadWordApp()">Click</button> -->
+
+    <p class="close" id="close">X</p>
+        <header id="header"></header>
+
+        <main>
+            <div class="main-container">
+                <div class="choice-container" id="choiceContainer">
+                    <select name="choice" id="choice">
+                        <option value="colors">Colors</option>
+                        <option value="opinions">Opinions</option>
+                        <option value="conjunctions">Conjunctions</option>
+                    </select>
+                    <button class="btn" id="selectBtn">Select</button>
+                </div>
+                
+    
+                <div class="activity-container" id="activityContainer">
+                    <p class="english" id="english"</p>
+                    <div class="input-container">
+                        <input type="text" class="spanish" id="spanish">
+                        <button class="btn" id="answerBtn">Check</button>
+                        <button class="btn" id="nextBtn">Next</button>
+                    </div>
+                </div>
+    
+                <div class="summary-container" id="summaryContainer">
+                    <div class="item-container" id="itemContainer"></div>
+                    <button class="btn" id="resetBtn">Finish</button>
+                </div>
+                
+            </div>
+        </main>
+</body>
+</html>

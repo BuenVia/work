@@ -34,47 +34,36 @@ function loadWords() {
 
 function setQuestion() {
     if (questionIndex < category.length) {
-        englishEl.style.color = 'black'
         englishEl.innerText = category[questionIndex].english
+        
         spanishEl.value = ''
         spanishEl.disabled = false
         spanishEl.focus()
         answerBtn.style.display = 'block'
         nextBtn.style.display = 'none'
+        elementCtrl('white', 'black', 'black')
     } else {
         activityContainer.style.display = 'none'
         nextBtn.style.display = 'none'
         summaryContainer.style.display = 'flex'
         console.log('finished', wrongAnswer);
-        wrongAnswer.forEach(divMaker)
-        function divMaker(wrongAnswer) {
-            const div = document.createElement('div')
-            const divEnglish = document.createElement('div')
-            const divSpanish = document.createElement('div')
-            divEnglish.innerText = wrongAnswer.english
-            divSpanish.innerText = wrongAnswer.spanish
-
-            div.classList.add('summary-item')
-            divEnglish.classList.add('english')
-            divSpanish.classList.add('spanish')
-
-            div.appendChild(divEnglish)
-            div.appendChild(divSpanish)
-
-            itemContainer.appendChild(div)
+        if (wrongAnswer.length > 0) {
+            wrongAnswer.forEach(divMaker)
+        } else {
+            itemContainer.innerText = 'Congratulations!!! No wrong answers.'
         }
     }
-
 }
 
 function checkAnswer () {
     answerBtn.style.display = 'none'
     nextBtn.style.display = 'block'
     spanishEl.disabled = true
+    nextBtn.focus()
     if (category[questionIndex].spanish.includes(spanishEl.value)) {
-        englishEl.style.color = 'green'
+        elementCtrl('green', 'white', 'white')
     } else {
-        englishEl.style.color = 'red'
+        elementCtrl('red', 'white', 'white')
         wrongAnswer.push(category[questionIndex])
     }
     questionIndex++
@@ -89,6 +78,29 @@ function reset() {
     activityContainer.style.display = 'none'
     summaryContainer.style.display = 'none'
     close.style.display = 'none'
+}
+
+function elementCtrl(clr1, clr2, clr3) {
+    activityContainer.style.backgroundColor = clr1
+    englishEl.style.color = clr2
+    spanishEl.style.color = clr3
+}
+
+function divMaker(wrongAnswer) {
+    const div = document.createElement('div')
+    const divEnglish = document.createElement('div')
+    const divSpanish = document.createElement('div')
+    divEnglish.innerText = wrongAnswer.english
+    divSpanish.innerText = wrongAnswer.spanish
+
+    div.classList.add('summary-item')
+    divEnglish.classList.add('english')
+    divSpanish.classList.add('spanish')
+
+    div.appendChild(divEnglish)
+    div.appendChild(divSpanish)
+
+    itemContainer.appendChild(div)
 }
 
 function id(id) {
