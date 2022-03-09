@@ -56,9 +56,30 @@ class Calculator {
         this.previousOperand = ''
     }
 
+    getDisplayNumber(number) {
+        const stringNumber = number.toString()
+        const integerDigits = parseFloat(stringNumber.split('.'[0]))
+        const decimalDigits = stringNumber.split('.')[1]
+        let intergerDisplay
+        if (isNaN(integerDigits)) {
+            intergerDisplay = ''
+        } else {
+            intergerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits: 0})
+        }
+        if (decimalDigits != null) {
+            return `${intergerDisplay}.${decimalDigits}`
+        } else {
+            return intergerDisplay
+        }
+    }
+
     updateDisplay() {
-        this.currentOperandTextElement.innerText = this.currentOperand
-        this.previousOperandTextElement.innerText = this.previousOperand
+        this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
+        if (this.operation != null) {
+            this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        } else {
+            this.previousOperandTextElement.innerText = ''
+        }
     }
 }
 

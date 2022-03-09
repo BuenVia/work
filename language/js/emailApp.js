@@ -32,4 +32,4 @@ const emailFormalOne = [
     { english: "Dear Sir/ Madam", spanish: ["Estimado señor/ señora"] }
 ]
 
-const emailInformalOne = []
+const emailInformalTwo = []
