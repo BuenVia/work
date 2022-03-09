@@ -1,68 +1,58 @@
-:root {
-    --clr-one: rgb(50, 50, 50);
-    --clr-two: rgb(100, 100, 100);
-    --clr-three: rgb(200, 200, 200);
-    --clr-four: rgb(10, 100, 100);
-    --clr-five: rgba(10, 100, 100, 0.5);;
-    --clr-six: rgb(255, 10, 0);
-    --clr-seven: rgba(255, 10, 0, 0.5);;
-}
-
 *, *::after, *::before {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
 }
 
-.container {
-    display: flex;
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+.calculator-grid {
+    display: grid;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.calculator {
-    margin-top: 2rem;
-    background-color: var(--clr-one);
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-.screen {
-    background-color: var(--clr-two);
-    color: var(--clr-three);
-    padding: 10px;
-    margin-top: 1rem;
-    border-radius: 5px;
-}
-
-.btn-group {
-    margin-top: 1rem;
-}
-
-.btn {
-    margin: 0.3em;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
+.calculator-grid > button {
     cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
 }
 
-.number {
-    background-color: var(--clr-four);
-    color: var(--clr-three);
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .90);
 }
 
-.number:hover {
-    background-color: var(--clr-five);
+.span-two {
+    grid-column: span 2;
 }
 
-.operator {
-    background-color: var(--clr-six);
-    color: var(--clr-three);
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.operator:hover {
-    background-color: var(--clr-seven);
+.output .prev-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }

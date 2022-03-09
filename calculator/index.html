@@ -4,43 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/work/calculator/style.css">
+    <script src="/work/calculator/script.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
-    <a href="../">HOME</a>
-    <div class="container">
-        <div class="calculator">
-            <div class="row">
-                <div class="screen" id="screen">80085</div>
-            </div>
-            <div class="btn-group">
-                <div class="row">
-                    <button class="number btn" id="seven">7</button>
-                    <button class="number btn" id="eight">8</button>
-                    <button class="number btn" id="nine">9</button>
-                    <button class="operator btn" id="plus" value=+>+</button>
-                </div>
-                <div class="row">
-                    <button class="number btn" id="four">4</button>
-                    <button class="number btn" id="five">5</button>
-                    <button class="number btn" id="six">6</button>
-                    <button class="operator btn" id="minus">-</button>
-                </div>
-                <div class="row">
-                    <input class="number btn" type="submit" id="one" value=1>
-                    <input class="number btn" type="submit" id="two" value=2>
-                    <input class="number btn" type="submit" id="three" value="3">
-                    <button class="operator btn" id="divide">/</button>
-                </div>            <div class="row">
-                    <button class="number btn" id="number" value="0">0</button>
-                    <button class="operator btn" id="equals" value==>=</button>
-                    <button class="operator btn" id="dot">.</button>
-                    <button class="operator btn" id="times">*</button>
-                </div>
-            </div>
+    
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="prev-operand"></div>
+            <div data-current-operand class="current-operand"></div>
         </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete="">DEL</button>
+        <button data-operation>/</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
     </div>
 
 </body>
