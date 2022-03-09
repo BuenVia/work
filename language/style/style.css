@@ -120,6 +120,7 @@ header h1 {
 
 /*Email app*/
 .spanish-sentence {
+    margin-top: 1rem;
     height: 10rem;
     width: 12rem;
     border: none;
@@ -128,6 +129,12 @@ header h1 {
 
 .completed {
     margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: black;
+    text-align: left;
+    line-height: 20pt;
 }
 
 .email-container {
@@ -136,4 +143,9 @@ header h1 {
 }
 .spanish-email, .english-email {
     padding: 1rem;
+    background-color: aliceblue;
+    color: black;
+    margin: 1rem;
+    width: 300px;
+    border-radius: 10px;
 }
