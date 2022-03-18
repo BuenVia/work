@@ -12,6 +12,11 @@ nav {
     padding: 5px;
     background-color: darkblue;
     color: white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end ;
 }
 
 nav a {
@@ -26,4 +31,6 @@ nav button {
 header {
     background-color: red;
     color: white;
+    padding: 25px;
+    text-align: center;
 }
