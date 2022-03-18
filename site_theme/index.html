@@ -4,53 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>WebSite</title>
 </head>
 <body>
-    
-    <!--HEADER-->
-    <nav>
-        <a href="../">HOME</a>
-        <button>Change Theme</button>
-    </nav>
     <header>
-        <h1>Website Title</h1>
-        <h2>Subheading</h2>
+        <div class="head-container">
+            <h1>HEADER</h1>
+        </div>
+        <div class="navbar">
+                <a class="btn-link" href="#">Link 1</a>
+                <a class="btn-link" href="#">Link 2</a>
+                <a class="btn-link" href="#">Link 3</a>
+                <a class="btn-link" href="#">Link 4</a>
+        </div>
     </header>
-    <!--MAIN-->
-    <main>
-        <div class="main-container">
-            <!--TABS-->
-            <div class="tab" id="tabOne">Tab 1</div>
-            <div class="tab" id="tabTwo">Tab 2</div>
-            <div class="tab" id="tabThree">Tab 3</div>
 
-            <!--CONTAINERS-->
-            <div class="detail" id="detailOne">
-                <h3>Tab 1</h3>
-                <p>Various Text and information here on tab 1</p>
+    <main>
+        <div class="contain">
+            
+            <div class="side-container">
+                <h2 class="time">Side Heading</h2>
+                <h5>Side Description</h5>
+                <div class="fakeimgone" data-tooltip="Profile Pictue">Image</div>
+                <p>Some further text....</p>
+                <h3>More Text</h3>
+                <p>Images to show:</p>
+                <div class="fakeimgtwo">Image</div>
+                <div class="fakeimgtwo">Image</div>
+                <div class="fakeimgtwo">Image</div>
             </div>
-            <div class="detail" id="detailOne">
-                <h3>Tab 2</h3>
-                <p>Various Text and information here on tab 2</p>
+
+            <div class="main-container">
+                <div class="box">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Enter Date Here</h5>
+                    <div class="fakeimgthree">Image</div>
+                    <p>Sub Headline</p>
+                    <p>Introductory paragraph with further information on what this section contains. It could be a news article for example</p>
+                </div>
+                
+                <div class="box">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Enter Date Here</h5>
+                    <div class="fakeimgthree">Image</div>
+                    <p>Sub Headline</p>
+                    <p>Introductory paragraph with further information on what this section contains. It could be a news article for example</p>
+                </div>
             </div>
-            <div class="detail" id="detailOne">
-                <h3>Tab 3</h3>
-                <p>Various Text and information here on tab 3</p>
-            </div>
+
         </div>
     </main>
-    <!--FOOTER-->
-    <footer>
-        <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-        </ul>
-        <a href="javascript:void(0)">Powered by BuenVia</a>
-    </footer>
 
+    <footer>
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
