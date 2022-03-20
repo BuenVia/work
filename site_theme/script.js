@@ -5,6 +5,10 @@ tabOne.addEventListener('click', () => {
     console.log(true);
 })
 
+function changeTab() {
+    
+}
+
 function id(id) {
     return id = document.getElementById(id)
 }

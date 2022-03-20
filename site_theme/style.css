@@ -164,3 +164,7 @@ body {
         margin: auto;
     }
 }
+
+#sectionTwo {
+    display: none;
+}
