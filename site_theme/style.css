@@ -172,3 +172,18 @@ body {
 .section-two {
     display: none;
 }
+
+.head-dark {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.footer-dark {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

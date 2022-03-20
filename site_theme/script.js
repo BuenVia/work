@@ -1,28 +1,41 @@
+// Tab Variables
 const tabOne = id('tabOne')
 const tabTwo = id('tabTwo')
-const styleBtn = id('style')
 const sectionOne = id('sectionOne')
 const sectionTwo = id('sectionTwo')
 
-const headCont = query('.head-container')
+// Style Variables
+const styleBtn = id('style')
+const header = query('.head-container')
+const footer = query('.footer')
 
 tabOne.addEventListener('click', changeTab)
 tabTwo.addEventListener('click', changeTab)
 styleBtn.addEventListener('click', changeStyle)
 
+//Change Tab Function
 function changeTab() {
-    if (sectionOne.style.display !== 'block') {
+    if (sectionOne.style.display === 'block') {
         console.log('tab one');
+    } else if (sectionTwo.style.display === 'block') {
+        console.log('tab two');
+    }
+    sectionOne.style.display = 'none'
+    sectionTwo.style.display = 'block'
+}
+
+// Change Style Function
+function changeStyle() {
+    header.classList.toggle('head-dark')
+    footer.classList.toggle('footer-dark')
+    if (styleBtn.innerText === 'Dark') {
+        styleBtn.innerText = 'Light'
+    } else {
+        styleBtn.innerText = 'Dark'
     }
 }
 
-function changeStyle() {
-    headCont.style.backgroundColor = 'red'
-    styleBtn.innerText = 'Dark'
-    // document.querySelector('.head-container').style.backgroundColor = 'blue'
-
-}
-
+// Helper Functions
 function id(id) {
     return id = document.getElementById(id)
 }
