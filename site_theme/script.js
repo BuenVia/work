@@ -28,12 +28,13 @@ function changeTab() {
 // Change Style Function
 function changeStyle() {
     header.classList.toggle('head-dark')
-    side.style.backgroundColor = 'red'
     footer.classList.toggle('footer-dark')
     if (styleBtn.innerText === 'Dark') {
         styleBtn.innerText = 'Light'
+        side.style.backgroundColor = '#999'
     } else {
         styleBtn.innerText = 'Dark'
+        side.style.backgroundColor = '#ddd'
     }
 }
 
