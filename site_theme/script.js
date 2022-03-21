@@ -7,6 +7,7 @@ const sectionTwo = id('sectionTwo')
 // Style Variables
 const styleBtn = id('style')
 const header = query('.head-container')
+const side = query('.side-container')
 const footer = query('.footer')
 
 tabOne.addEventListener('click', changeTab)
@@ -27,6 +28,7 @@ function changeTab() {
 // Change Style Function
 function changeStyle() {
     header.classList.toggle('head-dark')
+    side.style.backgroundColor = 'red'
     footer.classList.toggle('footer-dark')
     if (styleBtn.innerText === 'Dark') {
         styleBtn.innerText = 'Light'
