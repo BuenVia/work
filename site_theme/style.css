@@ -29,21 +29,20 @@ body {
     text-align: center;
 }
 
-.navbar a{
-    text-decoration: none;
+.btn-link {
     padding: 7px 20px;
-    color: var(--txt-clr-one);
+    color: ;
     font-size: 20px;
     border: 1px solid var(--bkg-clr-one);
     border-radius: 10px;
 }
 
-.navbar a:hover {
+.btn-link:hover {
     color: var(--bkg-clr-one);
     cursor: pointer;
 }
 
-.btn-link.active {
+.active {
     background-color: #00dddd;
 }
 

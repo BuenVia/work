@@ -15,19 +15,20 @@ const footer = query('.footer')
 styleBtn.addEventListener('click', changeStyle)
 
 //Change Tab Function
-function changeTab(evt, tabNum) {
-    let i, section, btnLink
-    section = document.getElementsByClassName('section')
-    for (i = 0; i < section.length; i++) {
-        section[i].style.display = 'none'
-    }
-    btnLink = document.getElementsByClassName('btn-link') 
-    for (i = 0; i > btnLink.length; i++) {
-        btnLink[i].className = btnLink[i].className.replace(' active', '')
-    }
-    document.getElementById(tabNum).style.display = 'block'
-    evt.currentTarget.className += ' active'
+function changeTab(sectionName) {
+   let i, section, btnLink
+   section = document.getElementsByClassName('section')
+   for (i = 0; i < section.length; i++) {
+       section[i].style.display = 'none'
+   }
+   btnLink = document.getElementsByClassName('btn-link')
+   for (i = 0; i < btnLink.length; i++) {
+       btnLink[i].style.backgroundColor = ''
+   }
+    document.getElementById(sectionName).style.display = 'block'
 }
+
+id('tabOne').click()
 
 // Change Style Function
 function changeStyle() {
