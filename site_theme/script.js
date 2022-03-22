@@ -7,7 +7,9 @@ const sectionTwo = id('sectionTwo')
 // Style Variables
 const styleBtn = id('style')
 const header = query('.head-container')
+const navBar = query('.navbar')
 const side = query('.side-container')
+const mainCont = query('.main-container')
 const footer = query('.footer')
 
 tabOne.addEventListener('click', changeTab)
@@ -31,9 +33,13 @@ function changeStyle() {
     footer.classList.toggle('footer-dark')
     if (styleBtn.innerText === 'Dark') {
         styleBtn.innerText = 'Light'
-        side.style.backgroundColor = '#999'
+        navBar.style.backgroundColor = '#333'
+        side.style.backgroundColor = '#111'
+        side.style.color = '#ddd'
+        mainCont.style.backgroundColor = '#222'
     } else {
         styleBtn.innerText = 'Dark'
+        navBar.style.backgroundColor = 'var(--bkg-clr-thr)'
         side.style.backgroundColor = '#ddd'
     }
 }
