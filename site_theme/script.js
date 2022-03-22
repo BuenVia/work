@@ -12,19 +12,21 @@ const side = query('.side-container')
 const mainCont = query('.main-container')
 const footer = query('.footer')
 
-tabOne.addEventListener('click', changeTab)
-tabTwo.addEventListener('click', changeTab)
 styleBtn.addEventListener('click', changeStyle)
 
 //Change Tab Function
-function changeTab() {
-    if (sectionOne.style.display === 'block') {
-        console.log('tab one');
-    } else if (sectionTwo.style.display === 'block') {
-        console.log('tab two');
+function changeTab(evt, tabNum) {
+    let i, section, btnLink
+    section = document.getElementsByClassName('section')
+    for (i = 0; i < section.length; i++) {
+        section[i].style.display = 'none'
     }
-    sectionOne.style.display = 'none'
-    sectionTwo.style.display = 'block'
+    btnLink = document.getElementsByClassName('btn-link') 
+    for (i = 0; i > btnLink.length; i++) {
+        btnLink[i].className = btnLink[i].className.replace(' active', '')
+    }
+    document.getElementById(tabNum).style.display = 'block'
+    evt.currentTarget.className += ' active'
 }
 
 // Change Style Function

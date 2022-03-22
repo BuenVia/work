@@ -36,12 +36,15 @@ body {
     font-size: 20px;
     border: 1px solid var(--bkg-clr-one);
     border-radius: 10px;
-    background-color: rgba(0,0,0,0.2);
 }
 
 .navbar a:hover {
     color: var(--bkg-clr-one);
     cursor: pointer;
+}
+
+.btn-link.active {
+    background-color: #00dddd;
 }
 
 .contain {
@@ -165,13 +168,10 @@ body {
     }
 }
 
-.section-one {
+.section {
     display: block;
 }
 
-.section-two {
-    display: none;
-}
 
 .head-dark {
     background-color: #111;
