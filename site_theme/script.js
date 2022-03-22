@@ -37,10 +37,14 @@ function changeStyle() {
         side.style.backgroundColor = '#111'
         side.style.color = '#ddd'
         mainCont.style.backgroundColor = '#222'
+        mainCont.style.color = '#ddd'
     } else {
         styleBtn.innerText = 'Dark'
-        navBar.style.backgroundColor = 'var(--bkg-clr-thr)'
-        side.style.backgroundColor = '#ddd'
+        navBar.style.backgroundColor = ''
+        side.style.backgroundColor = ''
+        side.style.color = ''
+        mainCont.style.backgroundColor = ''
+        mainCont.style.color = ''
     }
 }
 
