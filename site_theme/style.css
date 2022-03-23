@@ -6,6 +6,14 @@
     --txt-clr-one: #f1f1f1;
 }
 
+.dark-mode {
+    --bkg-clr-one: #111;
+    --bkg-clr-two: #222;
+    --bkg-clr-thr: #333;
+    --img-clr-one: #9f9f9f;
+    --txt-clr-one: #f1f1f1;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -31,7 +39,7 @@ body {
 
 .btn-link {
     padding: 7px 20px;
-    color: ;
+    color: black;
     font-size: 20px;
     border: 1px solid var(--bkg-clr-one);
     border-radius: 10px;
@@ -169,20 +177,4 @@ body {
 
 .section {
     display: block;
-}
-
-
-.head-dark {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 40px;
-}
-
-.footer-dark {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
