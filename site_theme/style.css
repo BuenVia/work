@@ -29,10 +29,14 @@ body {
 
 .head-container {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--bkg-clr-one);
     font-size: 40px;
     color: var(--txt-clr-one);
+}
+
+.theme {
+    text-align: right;
 }
 
 .navbar {
