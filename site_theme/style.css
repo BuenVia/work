@@ -2,16 +2,20 @@
     --bkg-clr-one: #00dddd;
     --bkg-clr-two: #ddd;
     --bkg-clr-thr: #999999;
+    --bkg-clr-four: #fff;
     --img-clr-one: #9f9f9f;
-    --txt-clr-one: #f1f1f1;
+    --txt-clr-one: #999;
+    --txt-clr-two: #111;
 }
 
 .dark-mode {
     --bkg-clr-one: #111;
     --bkg-clr-two: #222;
     --bkg-clr-thr: #333;
-    --img-clr-one: #9f9f9f;
+    --bkg-clr-four: #444;
+    --img-clr-one: rgba(0,0,255,0.2);
     --txt-clr-one: #f1f1f1;
+    --txt-clr-two: #fff;
 }
 
 * {
@@ -63,11 +67,14 @@ body {
     flex: 30%;
     padding: 20px;
     background-color: var(--bkg-clr-two);
+    color: var(--txt-clr-two);
 }
 
 .main-container {
     flex: 70%;
     padding: 20px;
+    background-color: var(--bkg-clr-four);
+    color: var(--txt-clr-two);
 }
 
 .fakeimgone {
