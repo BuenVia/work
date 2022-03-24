@@ -11,6 +11,7 @@ const navBar = query('.navbar')
 const side = query('.side-container')
 const mainCont = query('.main-container')
 const footer = query('.footer')
+let darkMode = localStorage.getItem('darkMode')
 
 styleBtn.addEventListener('click', changeStyle)
 
@@ -26,13 +27,28 @@ function changeTab(sectionName) {
 id('tabOne').click()
 
 // Change Style Function
+function enableDarkMode() {
+    document.body.classList.add('dark-mode')
+    styleBtn.innerText = 'Light'
+    localStorage.setItem('darkMode', 'enabled')
+}
+
+function enableLightMode() {
+    document.body.classList.remove('dark-mode')
+    styleBtn.innerText = 'Dark'
+    localStorage.setItem('darkMode', null)
+}
+
+if (darkMode === 'enabled') {
+    enableDarkMode()
+}
+
 function changeStyle() {
-    if (styleBtn.innerText === 'Dark') {
-        document.body.classList.add('dark-mode')
-        styleBtn.innerText = 'Light'
+    darkMode = localStorage.getItem('darkMode')
+    if (darkMode !== 'enabled') {
+        enableDarkMode()
     } else {
-        document.body.classList.remove('dark-mode')
-        styleBtn.innerText = 'Dark'
+        enableLightMode()
     }
 }
 
