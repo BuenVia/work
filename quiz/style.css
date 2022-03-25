@@ -43,7 +43,7 @@ main {
 
 /*INTRO*/
 .intro {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ main {
 
 /*SUMMARY*/
 .summary {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 

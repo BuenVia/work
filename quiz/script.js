@@ -1,8 +1,29 @@
+const startBtn = id('startBtn')
+
+startBtn.addEventListener('click', init)
 //Start quiz
+function init() {
+    query('.intro').style.display = 'none'
+    query('.quiz-card').style.display = 'flex'
+    setNextQuestion()
+}
+
+function setNextQuestion() {
+    
+}
 
 //Quiz Functionality
 
 //Summary
+
+//Helper Functions
+function id(id) {
+    return document.getElementById(id)
+}
+
+function query(query) {
+    return document.querySelector(query)
+}
 
 //Questions
 const questions = [
