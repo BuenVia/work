@@ -52,7 +52,7 @@ main {
 
 /*QUIZ CARD*/
 .quiz-card {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 20px;
     border: 1px solid white;
@@ -68,5 +68,20 @@ main {
 
 /*SUMMARY*/
 .summary {
-    display: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-box {
+    padding: 10px;
+    border: 1px solid var(--txt-one);
+    margin-top: 1rem;
+}
+
+.summary-box.correct {
+    background-color: var(--bkg-correct);
+}
+
+.summary-box.wrong {
+    background-color: var(--bkg-wrong);
 }
